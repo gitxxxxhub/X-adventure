@@ -1,4 +1,18 @@
-https://github.com/junautogroup/The-Greatest-Prolifically.git# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+This is a sample GitHub Actions workflow for building and deploying a Jekyll site to GitHub Pages. Here's a summary of what the workflow does:
+
+- **Triggers**: The workflow runs on pushes to the `main` branch and can also be manually triggered from the Actions tab.
+- **Permissions**: The workflow sets permissions for the `GITHUB_TOKEN` to allow reading contents and writing to GitHub Pages, and allows for the creation of ID tokens.
+- **Concurrency**: Only one deployment is allowed at a time; however, in-progress runs are not canceled.
+- **Build Job**:
+  - Checks out the repository.
+  - Sets up GitHub Pages.
+  - Builds the site using Jekyll.
+  - Uploads the build artifact.
+- **Deploy Job**:
+  - Runs after the build job.
+  - Deploys the site to GitHub Pages.
+
+If you need further assistance with this workflow or specific modifications, please let me know.https://github.com/junautogroup/The-Greatest-Prolifically.git# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
